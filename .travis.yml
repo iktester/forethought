@@ -1,10 +1,8 @@
-language: node_js
-node_js:
-  - "lts/*"
+sudo: required
 services: 
   - docker
 before_install:
   - docker build -t forethought .
-  - docker run -d -p 8080:8080 forethought
-  - docker ps -a
+script:
+  - docker run -e CI=true forethought npm run test -- --coverage
   
