@@ -1,1 +1,1 @@
-# Forethought: A Demo Application.
+# Forethought: A Demo Application
